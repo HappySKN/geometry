@@ -5,3 +5,6 @@ main: main.o
 
 main.o: main.cpp
 	g++ main.cpp -Wall -c -lgraph
+
+clean:
+	rm -rf *.o hello
