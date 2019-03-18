@@ -7,4 +7,4 @@ main.o: main.cpp
 	g++ main.cpp -Wall -c -lgraph
 
 clean:
-	rm -rf *.o hello
+	rm -rf *.o geometry
