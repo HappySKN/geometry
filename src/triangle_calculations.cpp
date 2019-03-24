@@ -19,7 +19,7 @@ void triangle_calculations(int* TR_x, int* TR_y, int TR_n)
         P = a + b + c;
         S = sqrt(P / 2 * (P / 2 - a) * (P / 2 - b) * (P / 2 - c));
         k += 1;
-        printf("\nPERIMETER #%d = %.2f", k, P);
-        printf("\nArea #%d = %.2f\n", k, S);
+        printf("\nPerimeter of triangle #%d = %.2f", k, P);
+        printf("\nArea of triangle #%d = %.2f\n", k, S);
     }
 }
