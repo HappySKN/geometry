@@ -1,4 +1,3 @@
-#include "polygon.h"
 #include <math.h>
 #include <stdio.h>
 
