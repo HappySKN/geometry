@@ -1,6 +1,7 @@
 all: bin/geometry
 
-
+build/intersect.o: src/intersect.cpp
+	g++ src/intersect.cpp -o build/intersect.o -c -Wall -Werror
 
 build/print.o: src/print.cpp
 	g++ src/print.cpp -o build/print.o -c -Wall -Werror -lgraph
@@ -26,8 +27,8 @@ build/circle.o: src/circle.cpp
 build/main.o: src/main.cpp
 	g++ src/main.cpp -o build/main.o -c -Wall -Werror
 
-bin/geometry: build/main.o build/circle.o build/triangle.o build/polygon.o build/circle_calculations.o build/triangle_calculations.o build/polygon_calculations.o build/print.o
-	g++ build/main.o build/circle.o build/triangle.o build/polygon.o build/circle_calculations.o build/triangle_calculations.o build/polygon_calculations.o build/print.o -Wall -Werror -o bin/geometry -lgraph
+bin/geometry: build/main.o build/circle.o build/triangle.o build/polygon.o build/circle_calculations.o build/triangle_calculations.o build/polygon_calculations.o build/print.o build/intersect.o
+	g++ build/main.o build/circle.o build/triangle.o build/polygon.o build/circle_calculations.o build/triangle_calculations.o build/polygon_calculations.o build/print.o build/intersect.o -Wall -Werror -o bin/geometry -lgraph
 
 .PHONY: clean
 

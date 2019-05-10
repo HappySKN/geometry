@@ -38,6 +38,7 @@ int main()
     CIR_r = new int[CIR_n];
     circle(CIR_x, CIR_y, CIR_r, CIR_n);
     circle_calculations(CIR_r, CIR_n);
+    intersect(CIR_x, CIR_y, CIR_r, CIR_n);
 
     print_polygon(POL_x, POL_y, POL_v, POL_n);
     print_circle(CIR_x, CIR_y, CIR_r, CIR_n);
