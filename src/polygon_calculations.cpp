@@ -34,8 +34,8 @@ void polygon_calculations(int** POL_x, int** POL_y, int* POL_v, int POL_n)
             }
             if (l[j] < 0)
                 l[j] *= -1;
-            if (r[j]) <0)
-                r[j]*=-1;
+            if (r[j] < 0)
+                r[j] *= -1;
             Sl += l[j];
             Sr += r[j];
         }
