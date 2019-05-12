@@ -15,7 +15,7 @@ void intersect(int* CIR_x, int* CIR_y, int* CIR_r, int CIR_n)
             k = CIR_y[i] + CIR_r[i];
             h1 = CIR_x[j] + CIR_r[j];
             k1 = CIR_y[j] + CIR_r[j];
-            if (x <= z && y <= z && (h < h1 || k < k1)) {
+            if (x <= z && y <= z && (h < h1 || k < k1) && CIR_r[i] > CIR_r[j]) {
                 inter[i][j] = -1;
                 inter[j][i] = -1;
                 // printf("Circle #%d intersects with Circle #%d", i + 1, j +
