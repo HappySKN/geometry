@@ -18,7 +18,7 @@ before_script:
       
 script:
   - ls
-  - cd travis
+  - cd ../..
   - ls
   - make -f testing_make
   - ./bin/maintest
