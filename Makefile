@@ -1,6 +1,10 @@
 all: bin/geometry
 	./bin/geometry
 
+test: bin/maintest
+
+.PHONY: test
+
 build/intersect.o: src/intersect.cpp
 	g++ src/intersect.cpp -o build/intersect.o -c -Wall -Werror
 
@@ -32,9 +36,9 @@ bin/geometry: build/main.o build/circle.o build/triangle.o build/polygon.o build
 	g++ build/main.o build/circle.o build/triangle.o build/polygon.o build/circle_calculations.o build/triangle_calculations.o build/polygon_calculations.o build/print.o build/intersect.o -Wall -Werror -o bin/geometry -lgraph
 
 build/test/maintest.o: test/maintest.cpp
-	g++ test/maintest.cpp build/test/maintest.o -lgtest_main -lgtest -pthread -o -c -Wall -Werror
+	g++ test/maintest.cpp -o build/test/maintest.o -lgtest_main -lgtest -pthread -c -Wall -Werror
 
-test: 
+bin/maintest: 
 	g++ test/maintest.cpp -lgtest_main -lgtest -pthread -o bin/maintest -Wall -Werror
 
 .PHONY: clean
