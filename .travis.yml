@@ -4,5 +4,10 @@ dist: xenial
 
 script:
   - git ls-files src/ | xargs clang-format -i && git diff --exit-code
-  - sudo apt-get install libgtest-dev
+  - git clone https://github.com/bast/gtest-demo.git
+  - cd gtest-demo
+  - mkdir build
+  - cd build
+  - cmake ..
+  - cmake --build 
   - make tests
