@@ -12,7 +12,7 @@ script:
   - git clone https://github.com/bast/gtest-demo
   - cd gtest-demo
   - mkdir build
-  - cd build .
+  - cd build
   - cmake ..
-  - cmake --build 
+  - cmake --build . 
   - make tests
