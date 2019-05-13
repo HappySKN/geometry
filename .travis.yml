@@ -2,9 +2,14 @@ language: c++
 
 dist: xenial
 
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+
 script:
   - git ls-files src/ | xargs clang-format -i && git diff --exit-code
-  - git clone https://github.com/bast/gtest-demo.git
+  - git clone https://github.com/bast/gtest-demo
   - cd gtest-demo
   - mkdir build
   - cd build
