@@ -8,7 +8,7 @@ addons:
       - ubuntu-toolchain-r-test
       
 script:
-  - cd ..
+  - cd ../..
   - ls
   - make -f testing_make
   - ./bin/maintest
