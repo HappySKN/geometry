@@ -26,7 +26,7 @@ before_script:
   - wget http://download.savannah.gnu.org/releases/libgraph/libgraph-1.0.2.tar.gz
   - tar zxf libgraph-1.0.2.tar.gz
   - cd libgraph-1.0.2
-  - ./configure —disable-guile
+  - ./configure -—disable-guile
   - make
   - sudo make install
   - sudo cp /usr/local/lib/libgraph.* /usr/lib
