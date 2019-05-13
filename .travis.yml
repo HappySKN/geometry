@@ -18,7 +18,7 @@ before_script:
       
 script:
   - ls
-  - cd ../..
+  - cd ../../../home/
   - ls
   - make -f testing_make
   - ./bin/maintest
