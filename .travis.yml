@@ -18,7 +18,7 @@ before_script:
       
 script:
   - ls
-  - cd ../../../home/
+  - cd ../../../home/travis/build/HappySKN/geometry
   - ls
   - make -f testing_make
   - ./bin/maintest
