@@ -20,5 +20,5 @@ script:
   - ls
   - cd ../../../home/travis/build/HappySKN/geometry
   - ls
-  - make -f testing_make
+  - make test
   - ./bin/maintest

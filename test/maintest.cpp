@@ -140,7 +140,7 @@ TEST(Triangle, Per_3)
 
 TEST(Triangle, Area_3)
 {
-    EXPECT_EQ(24, S);
+    EXPECT_DOUBLE_EQ(24, S);
 }
 
 TEST(Polygon, Per_1)
@@ -168,7 +168,7 @@ TEST(Polygon, Area_2)
 TEST(Polygon, Per_3)
 {
     polygon_calculations(pol_x3, pol_y3, poly3);
-    EXPECT_EQ(29.8622, P);
+    EXPECT_DOUBLE_EQ(29.862204027770847, P);
 }
 
 TEST(Polygon, Area_3)
