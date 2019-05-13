@@ -18,6 +18,4 @@ before_script:
       
 script:
   - make
-  - cd bin/
-  - ls
   - ./bin/unit_tests
