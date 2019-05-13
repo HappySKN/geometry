@@ -30,7 +30,16 @@ build/main.o: src/main.cpp
 bin/geometry: build/main.o build/circle.o build/triangle.o build/polygon.o build/circle_calculations.o build/triangle_calculations.o build/polygon_calculations.o build/print.o build/intersect.o
 	g++ build/main.o build/circle.o build/triangle.o build/polygon.o build/circle_calculations.o build/triangle_calculations.o build/polygon_calculations.o build/print.o build/intersect.o -Wall -Werror -o bin/geometry -lgraph
 
+build/test/maintest.o: test/maintest.cpp
+	g++ test/maintest.cpp build/test/maintest.o -lgtest_main -lgtest -pthread -o -c -Wall -Werror
+
+tests: 
+	g++ test/maintest.cpp -lgtest_main -lgtest -pthread -o bin/maintest -Wall -Werror
+
 .PHONY: clean
 
 clean:
 	rm -rf build/*.o bin/geometry
+
+clean_test:
+	rm -rf build/test/*.o bin/maintest
