@@ -17,5 +17,5 @@ before_script:
   - cmake --build .
       
 script:
-  - make
-  - ./bin/unit_tests
+  - make bin/maintest
+  - ./bin/maintest
