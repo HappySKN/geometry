@@ -10,5 +10,7 @@ addons:
 script:
   - cd ../../../..
   - ls
+  - cd travis
+  - ls
   - make -f testing_make
   - ./bin/maintest
