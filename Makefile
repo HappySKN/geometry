@@ -1,4 +1,5 @@
 all: bin/maintest
+	./bin/maintest
 
 build/intersect.o: src/intersect.cpp
 	g++ src/intersect.cpp -o build/intersect.o -c -Wall -Werror
