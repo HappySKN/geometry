@@ -16,3 +16,4 @@ script:
   - cmake ..
   - cmake --build . 
   - make
+  - ./bin/maintest
