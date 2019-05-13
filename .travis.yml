@@ -25,6 +25,7 @@ before_script:
   - cd ../../../home/travis/build/HappySKN/geometry
   - wget http://download.savannah.gnu.org/releases/libgraph/libgraph-1.0.2.tar.gz
   - tar zxf libgraph-1.0.2.tar.gz
+  - ./libgraph-1.0.2
   - ./configure —disable-guile
   - make
   - sudo make install
