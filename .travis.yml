@@ -18,5 +18,6 @@ before_script:
       
 script:
   - make
+  - cd bin/
   - ls
   - ./bin/maintest
