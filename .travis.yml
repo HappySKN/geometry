@@ -17,6 +17,7 @@ before_script:
   - cmake --build .
       
 script:
-  - make -f testing_make
+  - cd ..
   - ls
+  - make -f testing_make
   - ./bin/maintest
