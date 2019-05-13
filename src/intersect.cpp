@@ -1,6 +1,5 @@
 #include "circle.h"
 #include "polygon.h"
-#include <math.h>
 #include <stdio.h>
 
 void intersect(int* CIR_x, int* CIR_y, int* CIR_r, int CIR_n)
@@ -8,8 +7,10 @@ void intersect(int* CIR_x, int* CIR_y, int* CIR_r, int CIR_n)
     int x, y, z, h, h1, k, k1, inter[CIR_n][CIR_n] = {0};
     for (int i = 0; i < CIR_n; i++)
         for (int j = i + 1; j < CIR_n; j++) {
-            x = abs(CIR_x[i] - CIR_x[j]);
-            y = abs(CIR_y[i] - CIR_y[j]);
+            if (x < 0)
+                x = (CIR_x[i] - CIR_x[j]) * -1;
+            if (y < 0)
+                y = (CIR_y[i] - CIR_y[j]) * -1;
             z = CIR_r[i] + CIR_r[j];
             h = CIR_x[i] + CIR_r[i];
             k = CIR_y[i] + CIR_r[i];
