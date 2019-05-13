@@ -7,13 +7,15 @@ addons:
     sources:
       - ubuntu-toolchain-r-test
 
-script:
+before_script:
   - git ls-files src/ | xargs clang-format -i && git diff --exit-code
   - git clone https://github.com/bast/gtest-demo
   - cd gtest-demo
   - mkdir build
   - cd build
   - cmake ..
-  - cmake --build . 
+  - cmake --build .
+      
+script:
   - make
-  - ../../bin/maintest
+  - ./bin/maintest
