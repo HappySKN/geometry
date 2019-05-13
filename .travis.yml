@@ -17,7 +17,7 @@ before_script:
   - sudo cp *.a /usr/lib
       
 script:
-  - cd ../../..
+  - cd ../../../home
   - ls
   - make -f testing_make
   - ./bin/maintest
