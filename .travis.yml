@@ -20,4 +20,4 @@ script:
   - make
   - cd bin/
   - ls
-  - ./bin/maintest
+  - ./bin/unit_tests
