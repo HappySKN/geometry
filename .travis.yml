@@ -32,9 +32,8 @@ before_script:
   - sudo cp /usr/local/lib/libgraph.* /usr/lib
       
 script:
-  - ls
-  - cd ../../../home/travis/build/HappySKN/geometry
-  - ls
+  - cd /home/travis/build/HappySKN/geometry
   - make test
   - make all
   - ./bin/maintest
+  - .bin/geometry
