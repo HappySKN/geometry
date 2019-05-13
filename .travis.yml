@@ -8,11 +8,7 @@ addons:
       - ubuntu-toolchain-r-test
       
 script:
-  - cd ../../..
-  - ls
-  - cd build
-  - ls
-  - cd virtualenv
+  - cd ../../../..
   - ls
   - make -f testing_make
   - ./bin/maintest
