@@ -1,5 +1,4 @@
 all: bin/geometry
-	./bin/geometry
 
 test: bin/maintest
 
