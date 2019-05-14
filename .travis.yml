@@ -36,4 +36,3 @@ script:
   - make test
   - make all
   - ./bin/maintest
-  - .bin/geometry
